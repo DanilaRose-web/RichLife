@@ -1,0 +1,55 @@
+.preloader {
+   background: #121b23;
+   background-size: cover;
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   opacity: 1;
+   z-index: 5;
+   visibility: visible;
+   transition: all 0.5s ease-out;
+}
+
+.preloader.hide {
+   opacity: 0;
+   visibility: hidden;
+}
+
+.preloader-container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 100%;
+   position: relative;
+   z-index: 1;
+}
+
+.preloader-content {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.preloader .img {
+   margin-bottom: 30px;
+   max-width: 500px;
+   width: 100%;
+}
+
+.preloader .img img {
+   max-width: 100%;
+   width: 500px;
+   height: auto;
+}
+
+.preloader .title {
+   font-size: 25px;
+   font-weight: 500;
+   line-height: 140%;
+   color: #fff;
+   text-align: center;
+}
+
+
+

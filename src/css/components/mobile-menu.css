@@ -1,0 +1,235 @@
+/* 
+ * если нужно отцентровать контент в меню по центру, то flex НЕ ИСИСПОЛЬЗОВАТЬ, только grid у элемента .mobile-menu
+*/
+
+.mobile-menu {
+   padding: 40px;
+   position: fixed;
+   right: -400px;
+   top: 0;
+   max-width: 400px;
+   width: 100%;
+   height: 100%;
+   /* background: #121B23; */
+   backdrop-filter: blur(5px);
+   border-radius: 15px;
+   /* background: rgba(255, 255, 255, 0.1); */
+   /* border-left: 1px solid rgba(255, 255, 255, 0.5); */
+   overflow-y: auto;
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   align-items: center;
+   z-index: 2;
+   box-shadow: -5px 0px 40px 20px rgb(0 0 0 / 20%);
+   transition: all 0.5s cubic-bezier(.16,.68,.18,1);
+}
+
+.mobile-menu.show {
+   right: 0;
+   transition: all 0.5s cubic-bezier(.16,.68,.18,1);
+}
+
+
+.mobile-menu .menu-item {
+   margin-bottom: 30px;
+}
+
+
+
+
+
+/* ссылки навигации */
+/* .mobile-menu-list > li {
+   padding: 5px 0;
+} */
+
+.mobile-menu-list > li > a {
+   padding: 10px 3px;
+   width: max-content;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 25px;
+   font-weight: 400;
+   line-height: 100%;
+   color: #fff;
+   cursor: pointer;
+}
+
+
+
+/* вложенные пункты меню */
+.mobile-menu-list-2 {
+   padding: 10px 10px;
+   overflow: hidden;
+}
+
+.mobile-menu-list-2 > li > a {
+   padding: 5px 3px;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 100%;
+   color: #fff;
+}
+
+
+
+
+
+
+
+
+/* Социальные сети */
+.widget-social {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+.widget-social a {
+   margin: 3px 0;
+   display: flex;
+}
+
+.widget-social a:not(:last-child) {
+   margin-right: 10px;
+}
+
+.widget-social a svg {
+   width: 24px;
+   height: 24px;
+   fill: #fff;
+   transition: all 0.2s ease-out;
+}
+
+.widget-social a:hover svg {
+   fill: #eb4707;
+}
+
+
+
+
+
+
+/* Поиск */
+.widget-search .form-item {
+   display: flex;
+   align-items: center;
+}
+
+.widget-search input {
+   margin-right: 10px;
+   padding: 0 10px 0 15px;
+   border-radius: 5px;
+   background: #fff;
+   font-size: 16px;
+   font-weight: 500;
+   color: #000;
+   border: 1px solid transparent;
+   width: 100%;
+   min-height: 35px;
+   display: flex;
+   align-items: center;
+   transition: all 0.2s ease-out;
+}
+
+.widget-search input:focus {
+   border: 1px solid lightcyan;
+}
+
+.widget-search input::placeholder {
+   color: lightpink;
+   opacity: 0.7;
+}
+
+
+.widget-search button {
+   padding: 3px 10px;
+   font-size: 16px;
+   font-weight: 400;
+   color: lightpink;
+   background: lightcyan;
+   min-height: 35px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 5px;
+   border: none;
+   outline: none;
+   transition: all 0.2s ease-out;
+}
+
+.widget-search button:hover {
+   background: #fff;
+}
+
+.button-group.mobile {
+   margin-bottom: 30px;
+   position: relative;
+}
+
+.i-button.mobile {
+   min-width: auto;
+   max-width: 100%;
+   width: 100%;
+}
+
+.i-button.mobile:not(:last-child) {
+   margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+/* крестик */
+.menu-close {
+   position: absolute;
+   top: 15px;
+   left: 45px;
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+}
+
+
+
+
+
+
+@media all and (max-width: 340px) {
+   .widget-search .form-item { flex-direction: column; align-items: flex-start; }
+   .widget-search input { margin-bottom: 10px; }
+   .widget-search button { width: 100%; }
+} 
+
+
+
+
+
+
+
+
+
+/* OVERLAY
+========================================================================== */
+.overlay {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #121B23;
+   cursor: pointer;
+   opacity: 0;
+   visibility: hidden;
+   z-index: 1;
+   transition: all 0.5s cubic-bezier(.16,.68,.18,1);
+}
+
+.overlay.show {
+   opacity: 0.5;
+   visibility: visible;
+   transition: all 0.5s cubic-bezier(.16,.68,.18,1);
+}

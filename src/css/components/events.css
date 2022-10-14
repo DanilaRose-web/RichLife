@@ -1,0 +1,166 @@
+.section-events {
+   padding: 0 0 100px 0;
+   background: #121B23;
+}
+
+.events-row {
+   position: relative;
+}
+
+.events-col {
+   margin-bottom: 30px;
+   display: flex;
+}
+
+
+
+/* мероприятие */
+.event {
+   position: relative;
+   width: 100%;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(40px);
+   transition: all 0.5s ease-out;
+}
+
+.event.animate-show {
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(0);
+}
+
+/* рамка при наведении */
+.event .hover-border {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 90%;
+   height: 90%;
+   transform: translate(-50%, -50%) scale(1.1);
+   border: 2px solid rgba(255, 255, 255, 1);
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease-out;
+   z-index: 1;
+}
+
+.event:hover .hover-border {
+   transform: translate(-50%, -50%) scale(1);
+   opacity: 1;
+   visibility: visible;
+}
+
+/* постоянный градиент */
+.event::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(180deg, rgba(18, 27, 35, 0) 0%, rgba(18, 27, 35, 0.9) 73.44%, #121B23 91.15%);
+   /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+}
+
+
+
+.event img {
+   max-width: 100%;
+   height: auto;
+}
+
+
+/* info */
+.event .info {
+   position: absolute;
+   bottom: 10%;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 80%;
+   z-index: 2;
+}
+
+/* заголовок */
+.i-title.event-title {
+   margin-bottom: 15px;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 18px;
+   font-weight: 600;
+   color: #fff;
+   transition: all 0.3s ease-out;
+}
+
+.i-title.event-title span {
+   display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+   transform: scale(1.1);
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease-out;
+}
+
+.event:hover .i-title.event-title span {
+   transform: scale(1);
+   opacity: 1;
+   visibility: visible;
+   transition-delay: 0.3s;
+}
+
+
+
+
+/* текст */
+.i-text.event-text {
+   overflow: hidden;
+   font-weight: 500;
+   color: rgb(165, 165, 165);
+}
+
+.i-text.event-text span  {
+   display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+   transform: translateY(100%);
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease-out;
+}
+
+.event:hover .i-text.event-text span {
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(0);
+   transition-delay: 0.45s;
+}
+
+
+/* Убираем исчезновение текста и рамки на сенсорных экранах */
+/* The primary input mechanism of the device includes a pointing device of limited accuracy. */
+@media (pointer: coarse) {
+   .i-title.event-title span { opacity: 1; visibility: visible; transform: scale(1); }
+   .i-text.event-text span { opacity: 1; visibility: visible; transform: translateY(0); }
+   .event .hover-border { opacity: 1; visibility: visible; transform: translate(-50%, -50%) scale(1); }
+}  
+
+
+
+@media all and (max-width: 1130px) {
+   .i-title.event-title { font-size: calc((100vw - 992px)/(1130 - 992) * (22 - 19) + 19px); }
+}
+
+@media all and (max-width: 992px) {
+   .i-title.event-title { font-size: calc((100vw - 576px)/(992 - 576) * (24 - 20) + 20px); }
+}
+
+@media all and (max-width: 630px) {
+   .section-events { padding: 60px 0 60px 0; }
+}
+
+@media all and (max-width: 576px) {
+   .i-title.event-title { font-size: calc((100vw - 280px)/(576 - 280) * (27 - 18) + 18px); }
+}

@@ -1,0 +1,39 @@
+.numbers-row {
+   margin-top: 60px;
+   position: relative;
+   z-index: 2;
+}
+
+.numbers-col {
+   margin-bottom: 30px;
+   display: flex;
+}
+
+.features-numbers {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+
+.features-numbers img {
+   margin-bottom: 10px;
+   display: flex;
+   max-width: 60px;
+   width: 100%;
+}
+
+.features-number {
+   margin-bottom: 10px;
+   font-weight: 600;
+   font-size: 50px;
+   color: #fff;
+   transition: all 0.3s ease-out;
+}
+
+.i-text.number-text {
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   text-align: center;
+}

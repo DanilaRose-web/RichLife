@@ -1,0 +1,92 @@
+.page-single {
+   background: url('../img/dist/about/about-bg4.webp') center no-repeat;
+   background-size: cover;
+   position: relative;
+}
+
+.page-single::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #121B23;
+   opacity: 0.7;
+}
+
+.i-container {
+   position: relative;
+   z-index: 1;
+}
+
+.content-wrap {
+   margin-top: 30px;
+   display: flex;
+   align-items: flex-start;
+}
+
+
+
+
+
+.post-img {
+   width: 100%;
+   box-shadow: 0 1px 21px rgba(0, 0, 0, 0.5);
+}
+
+.post-img img {
+   max-width: 100%;
+   height: auto;
+   max-height: 600px;
+}
+
+
+
+/* content */
+.i-content-wrap {
+   flex: 0 0 70%;
+   max-width: 70%;
+   
+}
+
+.i-content {
+   padding: 30px;
+   margin-right: 30px;
+   box-shadow: 0 1px 21px rgba(0, 0, 0, 0.5);
+   background: transparent;
+}
+
+
+
+
+
+
+/* post-details */
+.post-details {
+   margin-bottom: 30px;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   font-size: 13px;
+   font-weight: 400;
+   line-height: 130%;
+   color: rgba(255, 255, 255, 0.5);
+}
+
+
+.post-details a {
+   padding-left: 3px;
+   color: #eb4707;
+   font-weight: 600;
+   transition: all 0.2s ease-out;
+}
+
+.post-details a:hover {
+   color: #fff;
+}
+
+.post-details .separate {
+   padding: 0 10px 0 7px;
+   font-size: 9px;
+}

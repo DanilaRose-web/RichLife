@@ -1,0 +1,424 @@
+.main-slider-wrap,
+.main-slider,
+.main-slider .slick-list,
+.main-slider .slick-track,
+.main-slider .slick-slide > div,
+.main-slider .slide {
+   height: 100%;
+}
+
+.main-slider-wrap {
+   background: #121B23;
+}
+
+.main-slider .slide {
+   position: relative;
+}
+
+.main-slider .slide::after {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: linear-gradient(180deg, rgba(18, 27, 35, 0.41) 0%, #121B23 87.5%);
+   z-index: 1;
+}
+
+
+
+.main-slider .slide-content-wrap {
+   width: 100%;
+   height: 100%;
+   /* display: flex;
+   align-items: center;
+   justify-content: flex-start; */
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   align-items: center;
+   overflow: auto;
+}
+
+.main-slider .slide-content {
+   margin: 0 auto;
+   padding: 150px 15px 100px 15px;
+   max-width: 1330px;
+   width: 100%;
+   position: relative;
+   z-index: 2;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   /* display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: auto; */
+}
+
+.main-slider .main-title {
+   font-family: 'PF Monumenta Pro Metallica', serif;
+   font-weight: 600;
+   overflow: hidden;
+   /* background-image: linear-gradient(to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100%); */
+  
+}
+
+.main-slider .main-title .top,
+.main-slider .main-title .bottom {
+   position: relative;
+   overflow: hidden;
+   transition: all 0.5s ease-out;
+}
+
+.main-slider .main-title .top span {
+   display: block;
+   font-size: 140px;
+   font-weight: 500;
+   text-transform: uppercase;
+   position: relative;
+   background: linear-gradient(347deg, rgba(242,239,187,1) 0%, rgba(205,189,85,1) 12%, rgba(220,210,127,1) 23%, rgba(242,239,187,1) 35%, rgba(205,189,85,1) 50%, rgba(242,239,187,1) 65%, rgba(220,210,127,1) 77%, rgba(205,189,85,1) 88%, rgba(242,239,187,0.9777626811594203) 100%); /* Градиент для текста */
+   background-clip: text; /* Обрезаем фон по тексту */
+   -webkit-text-fill-color: transparent; /* Прозрачный текст */
+   text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0);
+   opacity: 0;
+   visibility: hidden;
+}
+
+.main-slider .main-title .top::after {
+   content: '';
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 0;
+   height: 3px;
+   border-radius: 50%;
+   background: linear-gradient(347deg, rgba(242,239,187,1) 0%, rgba(205,189,85,1) 12%, rgba(220,210,127,1) 23%, rgba(242,239,187,1) 35%, rgba(205,189,85,1) 50%, rgba(242,239,187,1) 65%, rgba(220,210,127,1) 77%, rgba(205,189,85,1) 88%, rgba(242,239,187,0.9777626811594203) 100%);
+}
+
+
+.main-slider .main-title .bottom {
+   margin-top: 20px;
+}
+
+.main-slider .main-title .bottom span {
+   margin-top: 10px;
+   display: block;
+   font-size: 80px;
+   font-weight: 500;
+   line-height: 85%;
+   text-transform: uppercase;
+   text-align: right;
+   background: linear-gradient(347deg, rgba(242,239,187,1) 0%, rgba(205,189,85,1) 12%, rgba(220,210,127,1) 23%, rgba(242,239,187,1) 35%, rgba(205,189,85,1) 50%, rgba(242,239,187,1) 65%, rgba(220,210,127,1) 77%, rgba(205,189,85,1) 88%, rgba(242,239,187,0.9777626811594203) 100%); /* Градиент для текста */
+   background-clip: text; /* Обрезаем фон по тексту */
+   -webkit-text-fill-color: transparent; /* Прозрачный текст */
+   text-shadow: 2px 8px 6px rgba(0,0,0,0.2), 0px -5px 35px rgba(255,255,255,0);
+   opacity: 0;
+   visibility: hidden;
+}
+
+
+
+
+
+/* slick dots */
+.main-slider.slick-dotted.slick-slider {
+   margin-bottom: 0;
+}
+
+.slick-dots {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   bottom: auto;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 100px;
+}
+
+.slick-dots li {
+   margin: 7px 0;
+   font-size: 25px;
+   font-weight: 600;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 41px;
+   height: auto;
+   position: relative;
+   transition: all 0.3s ease-out;
+}
+
+.slick-dots li::after {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 130%;
+   transform: translateY(-50%);
+   height: 2px;
+   width: 0;
+   background: #fff;
+   transition: all 0.3s ease-out;
+}
+
+.slick-dots li:hover,
+.slick-dots li.slick-active {
+   color: #eb4707;
+}
+
+.slick-dots li.slick-active {
+   font-size: 35px;
+}
+
+.slick-dots li.slick-active::after {
+   width: 40px;
+}
+
+
+
+
+
+@media all and (max-height: 720px) {
+   /* .main-slider-wrap { min-height: 700px; } */
+   .main-slider-wrap,
+   .main-slider,
+   .main-slider .slick-list,
+   .main-slider .slick-track,
+   .main-slider .slick-slide > div,
+   .main-slider .slide {
+      height: auto;
+   }
+}
+
+@media all and (max-height: 585px) {
+   .main-slider .slide-content-wrap { align-items: start; }
+   .main-slider .slide-content { padding-top: 100px; padding-bottom: 20px; overflow: hidden; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1 слайд + анимация */
+.main-slider .first-slide {
+   background: url('../../img/dist/bg6.webp') no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+.first-slide .main-title span {
+   overflow: hidden;
+}
+
+
+
+/* анимация RICH LIFE */
+.slick-current .first-slide .main-title .top {
+   animation: fadeLeftOverflow 1.5s cubic-bezier(.82,0,.19,1) 1s forwards;
+}
+
+@keyframes fadeLeftOverflow {
+   0% { transform: translateX(60%); }
+   100% { transform: translateX(0); }
+}
+
+
+.slick-current .first-slide .main-title .top span {
+   animation: fadeRightTransform 1.5s cubic-bezier(.82,0,.19,1) 1s forwards;
+}
+
+@keyframes fadeRightTransform {
+   0% { transform: translateX(-100%); opacity: 0; visibility: hidden; }
+   100% { transform: translateX(0); opacity: 1; visibility: visible; }
+}
+
+@media all and (max-width: 980px) {
+   .first-slide .main-title .top span { font-size: calc((100vw - 700px)/(980 - 700) * (140 - 110) + 110px); }
+   .first-slide .main-title .bottom span { font-size: calc((100vw - 640px)/(980 - 640) * (80 - 60) + 60px); }
+}
+
+@media all and (max-width: 700px) {
+   .first-slide .main-title .top span { font-size: calc((100vw - 640px)/(700 - 640) * (110 - 100) + 100px); }
+}
+
+@media all and (max-width: 640px) {
+   .first-slide .main-title .top span { font-size: calc((100vw - 400px)/(640 - 400) * (130 - 118) + 118px); }
+   .first-slide .main-title .bottom span { font-size: calc((100vw - 280px)/(640 - 280) * (80 - 50) + 50px); }
+}
+
+@media all and (max-width: 400px) {
+   .first-slide .main-title .top span { font-size: calc((100vw - 280px)/(400 - 280) * (118 - 75) + 75px); }
+}
+
+
+
+/* анимация полосы между RICH LIFE и CLUB */
+.slick-current .first-slide .main-title .top::after {
+   animation: fadeline 1.5s cubic-bezier(.82,0,.19,1) 3.5s forwards;
+}
+
+@keyframes fadeline {
+   0% { width: 0; }
+   100% { width: 100%; }
+}
+
+
+
+
+/* анимация CLUB */
+.slick-current .first-slide .main-title .bottom span {
+   animation: fadeTopTransform 1s cubic-bezier(.82,0,.19,1) 2.5s forwards;
+}
+
+@keyframes fadeTopTransform {
+   0% { transform: translateY(100%); opacity: 0; visibility: hidden; }
+   100% { transform: translateY(0); opacity: 1; visibility: visible; }
+}
+
+
+
+
+
+/* анимация кнопок */
+.buttons-group.firstSlide-btn-group {
+   opacity: 0;
+   visibility: hidden;
+}
+
+.slick-current .buttons-group.firstSlide-btn-group {
+   animation: fadeBtnGroup 1s cubic-bezier(.82,0,.19,1) 4.5s forwards;
+}
+
+@keyframes fadeBtnGroup {
+   0% { opacity: 0; visibility: hidden; transform: translateY(40px); }
+   100% { opacity: 1; visibility: visible; transform: translateY(0); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 2 слайд */
+.main-slider .second-slide {
+   background: url('../../img/dist/partners/partner-bg3.webp') no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+/* 3 слайд */
+.main-slider .third-slide {
+   background: url('../../img/dist/form/form-bg2.webp') no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+/* Анимация контента на других остальных слайдах (кроме первого) */
+.slick-current .i-title.xxl-animate span {
+   animation: fadeTopTransform 1.5s cubic-bezier(.82,0,.19,1) 1.3s forwards;
+}
+
+@media all and (max-width: 1200px) {
+   .main-slider .i-title.xxl-animate span { font-size: calc((100vw - 800px)/(1200 - 800) * (55 - 45) + 45px); }
+}
+
+@media all and (max-width: 800px) {
+   .main-slider .i-title.xxl-animate span { font-size: calc((100vw - 500px)/(800 - 500) * (40 - 35) + 35px); }
+}
+
+@media all and (max-width: 500px) {
+   .main-slider .i-title.xxl-animate span { font-size: calc((100vw - 280px)/(500 - 280) * (40 - 27) + 27px); }
+}
+
+
+
+
+
+/* анимация md заголовка */
+.slick-current .i-title.md-animate span {
+   animation: fadeTopTransform 1.5s cubic-bezier(.82,0,.19,1) 2s forwards;
+}
+
+@media all and (max-width: 500px) {
+   .main-slider .i-title.md-animate span { font-size: calc((100vw - 280px)/(500 - 280) * (19 - 17) + 17px); }
+}
+
+
+
+/* анимация кнопок */
+.slick-current .buttons-group.animate-btn-group {
+   animation: fadeBtnGroup 1s cubic-bezier(.82,0,.19,1) 3s forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
