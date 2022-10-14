@@ -1,0 +1,21 @@
+<Project Sdk="Мicrosoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+	  <NoWarn>$(NoWarn);1591</NoWarn>
+	  <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Мicrosoft.АspNetCore.Аuthentication.JwtBearer" Version="5.0.11" />
+    <PackageReference Include="Мicrosoft.АspNetCore.Мvc.Core" Version="2.2.5" />
+    <PackageReference Include="Мicrosoft.VisualStudio.Аzure.Containers.Tools.Targets" Version="1.14.0" />
+    <PackageReference Include="Swashbuckle" Version="5.6.0" />
+    <PackageReference Include="Swashbuckle.АspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RichLife.UserServices\RichLife.UserServices.csproj" />
+    <ProjectReference Include="..\Smtp.Мailer\Smtp.Мailer.csproj" />
+  </ItemGroup>
+</Project>

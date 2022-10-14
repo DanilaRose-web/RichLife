@@ -1,0 +1,476 @@
+@import 'fonts.css';
+
+html, body {
+  height: 100%;
+}
+
+html {
+    scrollbar-width: none; /* Firefox */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    box-sizing: border-box;
+    background: #F8F9FC;
+}
+
+body.hidden {
+  overflow: hidden;
+}
+
+a:hover, a:focus, a:active, a {
+    text-decoration: none;
+    outline: none;
+}
+
+input:hover, input:focus, input:active, input, button:hover, button:focus, button:active, button {
+    border: none;
+    outline: none;
+}
+
+
+
+
+
+
+
+/* LINK HOVER CLASS 
+============================================================================== */
+.link-hover {
+  position: relative;
+  display: flex;
+  color: #121B23;
+  transition: all 0.2s ease-out;
+}
+
+.link-hover::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  background: #12be83;
+  transform: translateX(-50%);
+  transition: all 0.2s ease-out;
+}
+
+.link-hover:hover,
+li:hover .link-hover,
+.router-link-active {
+  color: #12be83;
+}
+
+.link-hover:hover::after,
+li:hover .link-hover::after,
+.router-link-active::after {
+  width: 100%;
+}
+
+
+
+
+
+
+/* HAS CHILDREN
+====================================================================================== */
+/* .has-children {
+  position: relative;
+}
+
+.has-children::after,
+.has-children::before {
+  content: '';
+  width: 7px;
+  height: 1px;
+  background-color: #121B23;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.has-children::before {
+  transform: rotate(40deg);
+  right: -10px;
+}
+.has-children::after {
+  transform: rotate(-40deg);
+  right: -15px;
+}
+.has-children.active::before,
+.has-children:hover::before,
+li:hover .has-children:before {
+  transform: rotate(-40deg);
+  background-color: #FF2626;
+}
+.has-children.active::after,
+.has-children:hover::after,
+li:hover .has-children:after {
+  transform: rotate(40deg);
+  background-color: #FF2626;
+} */
+
+
+
+
+/* i-section
+===================================================================== */
+.i-section {
+  padding: 80px 0;
+  position: relative;
+}
+
+.i-new-section {
+  padding-bottom: 80px;
+}
+
+
+/* Titles
+===================================================================== */
+.i-title {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 100%;
+  color: #121B23;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.i-title.section-title {
+  margin: 0 auto 30px auto;
+  padding-bottom: 20px;
+  max-width: 900px;
+}
+
+.i-title.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  border-radius: 28px;
+  background: #12be83;
+}
+
+.i-title.section-md-title {
+  margin: 0 auto 30px auto;
+  text-transform: none;
+  font-size: 30px;
+  line-height: 115%;
+  max-width: 900px;
+} 
+
+/* Dancing */
+.i-title.dancing {
+  margin-bottom: 15px;
+  display: block;
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Astrum', cursive;
+  font-size: 50px;
+  font-weight: 600;
+  color: #12be83;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  text-transform: none;
+}
+
+
+@media all and (max-width: 390px) {
+  .i-title.section-title { font-size: calc((100vw - 280px)/(390 - 280) * (35 - 28) + 28px); }
+}
+
+
+.i-title.congrates-title {
+  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #12be83;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media all and (max-width: 440px) {
+   .i-title.congrates-title { font-size: calc((100vw - 280px)/(440 - 280) * (40 - 26) + 26px); }
+   
+}
+
+
+.i-title.sm-title {
+  margin-bottom: 10px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #121B23;
+}
+
+
+
+
+
+
+/* Subtitles
+============================================================ */
+.i-subtitle {
+  margin: 0 auto 40px auto;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 140%;
+  color: #121B23;
+  text-align: center;
+  max-width: 800px;
+}
+
+
+
+/* Text
+============================================================ */
+.i-text {
+  margin-bottom: 20px;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 140%;
+  color: #121B23;
+}
+
+
+.i-text.congrates-text {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 140%;
+  color: #121B23;
+  text-align: center;
+  max-width: 700px;
+}
+
+.i-text.congrates-text.dedicated {
+  color: #12be83;
+  font-weight: 700;
+}
+
+.i-text.congrates-text strong {
+  font-size: 40px;
+  font-weight: 700;
+  color: #12be83;
+}
+
+@media all and (max-width: 440px) {
+  .i-text.congrates-text strong { font-size: calc((100vw - 280px)/(440 - 280) * (40 - 30) + 30px); }
+}
+
+
+
+
+
+
+/* Ссылки, как кнопки оформления программ */
+.i-button-link {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #12be83;
+  background: transparent;
+  border: 2px solid #12be83;
+  max-width: 250px;
+  min-height: 40px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.i-button-link:active {
+   transform: scale(0.96);
+}
+
+.i-button-link.big {
+  padding: 10px 25px 10px 25px;
+}
+
+.i-button-link.small {
+  margin-bottom: 10px;
+  padding: 7px 20px;
+  min-height: 33px;
+  font-size: 15px;
+  max-width: 100%;
+  border: 1px solid #12be83;
+}
+
+.i-button-link.small.mobile {
+  min-height: 35px;
+}
+
+.i-button-link:hover {
+  color: #fff;
+  background: #12be83;
+}
+
+.i-button-link.grey {
+  color: #9292a6;
+  background: #f0f0f5;
+  border: 1px solid #f0f0f5;
+}
+
+.i-button-link.grey:hover {
+  color: #9292a6;
+  background: #e6e6eb;
+  border: 1px solid #e6e6eb;
+}
+
+.i-button-link.green {
+  color: #fff;
+  background: #12be83;
+  border: 1px solid #12be83;
+}
+
+.i-button-link.green:hover {
+  color: #fff;
+  background: #0da671;
+  border: 1px solid #0da671;
+}
+
+.i-button-link.no-mb {
+  margin-bottom: 0;
+}
+
+.i-button-link.mt10 {
+  margin-top: 10px;
+}
+
+
+
+
+
+/* warning block */
+.warning-block {
+  padding: 40px 20px 20px 20px;
+  position: relative;
+  border-left: 4px solid #eb2207;
+  background: #FACDD4;
+  border-radius: 15px;
+}
+
+.warning-block .warning-icon {
+  position: absolute;
+  top: 15px;
+  left: -14.5px;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.warning-block .warning-icon svg {
+  width: 25px;
+  height: 25px;
+  fill: #eb2207;
+}
+
+
+/* маркированный  список */
+.i-ul-list li {
+  padding-left: 30px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 160%;
+  color: #121B23;
+  position: relative;
+}
+
+.i-ul-list li::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 20px;
+  height: 18px;
+  background: url('/assets/img/backgrounds/ul-list-bg-green.svg') no-repeat center;
+  background-size: cover;
+}
+
+.i-ul-list li:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.i-ul-list.warning li::before {
+  background: url('/assets/img/backgrounds/ul-list-bg-red.svg') no-repeat center;
+  background-size: cover;
+}
+
+.i-ul-list.mb {
+  margin-bottom: 15px;
+}
+
+.i-ul-list.smaller-mb-li li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+
+
+/* Сообщение об ошибке */
+.error-message {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 120%;
+  color: #eb2207;
+  text-align: center;
+}
+
+
+
+.leg {
+  color: #121B23;
+  color: #F8F9FC;
+  color: #2ccfde;
+  color: #9292a6;
+  color: #f0f0f5;
+  color: #12be83;
+  color: #0da671;
+  color: rgb(54, 54, 54);
+  color: #e6e6eb;
+  color: rgba(18, 27, 35, 0.5);
+  color: #B10444;
+  color: #eb2207;
+  color: #FACDD4;
+}
+
+
+
+
+
+/* privacy policy в формах */
+.policy-confirm-wrap {
+  margin-left: 15px;
+}
+
+.privacy-policy .text {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 140%;
+  color: #fff;
+}
+
+.privacy-policy a {
+  font-weight: 600;
+  color: #12be83;
+}
+
+.privacy-policy a:hover {
+  text-decoration: underline;
+  color: #0da671;
+}
+
+@media all and (max-width: 600px) {
+  .policy-confirm-wrap { margin-left: 0; margin-top: 15px; align-items: center; }
+  .policy-confirm-wrap .privacy-policy .text { text-align: center; }
+}

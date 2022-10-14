@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31825.309
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RichLife", "RichLife.csproj", "{4A6F5EFA-8CAE-4137-A2A9-C48B50A0D57E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RichLife.Enum", "..\RichLife.Enum\RichLife.Enum.csproj", "{EFE15782-0DB6-4890-914A-A52DA2379ADF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RichLife.Data", "..\RichLife.Data\RichLife.Data.csproj", "{7D053DE7-EC3E-4647-AD13-45AC951555CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RichLife.IUserServices", "..\RichLife.IUserService\RichLife.IUserServices.csproj", "{825D8191-2FC5-4F1B-9BFF-04CB85B24D7E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RichLife.UserServices", "..\RichLife.UserServices\RichLife.UserServices.csproj", "{8D11AA00-4A0D-4892-B7DA-18520D713CB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RIchLife.Utilites", "..\RIchLife.Utilites\RIchLife.Utilites.csproj", "{9F7C4A17-A7FA-4F8F-B1CE-CF53125212E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{4726CB21-205F-4A79-A631-3B8E7000F58F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smtp.Mailer", "..\Smtp.Mailer\Smtp.Mailer.csproj", "{47DFBB77-18DB-493D-B1D5-8CCD324FA8B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A6F5EFA-8CAE-4137-A2A9-C48B50A0D57E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A6F5EFA-8CAE-4137-A2A9-C48B50A0D57E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A6F5EFA-8CAE-4137-A2A9-C48B50A0D57E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A6F5EFA-8CAE-4137-A2A9-C48B50A0D57E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFE15782-0DB6-4890-914A-A52DA2379ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFE15782-0DB6-4890-914A-A52DA2379ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFE15782-0DB6-4890-914A-A52DA2379ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFE15782-0DB6-4890-914A-A52DA2379ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D053DE7-EC3E-4647-AD13-45AC951555CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D053DE7-EC3E-4647-AD13-45AC951555CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D053DE7-EC3E-4647-AD13-45AC951555CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D053DE7-EC3E-4647-AD13-45AC951555CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{825D8191-2FC5-4F1B-9BFF-04CB85B24D7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{825D8191-2FC5-4F1B-9BFF-04CB85B24D7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{825D8191-2FC5-4F1B-9BFF-04CB85B24D7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{825D8191-2FC5-4F1B-9BFF-04CB85B24D7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D11AA00-4A0D-4892-B7DA-18520D713CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D11AA00-4A0D-4892-B7DA-18520D713CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D11AA00-4A0D-4892-B7DA-18520D713CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D11AA00-4A0D-4892-B7DA-18520D713CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F7C4A17-A7FA-4F8F-B1CE-CF53125212E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F7C4A17-A7FA-4F8F-B1CE-CF53125212E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F7C4A17-A7FA-4F8F-B1CE-CF53125212E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F7C4A17-A7FA-4F8F-B1CE-CF53125212E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47DFBB77-18DB-493D-B1D5-8CCD324FA8B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47DFBB77-18DB-493D-B1D5-8CCD324FA8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47DFBB77-18DB-493D-B1D5-8CCD324FA8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47DFBB77-18DB-493D-B1D5-8CCD324FA8B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{47DFBB77-18DB-493D-B1D5-8CCD324FA8B2} = {4726CB21-205F-4A79-A631-3B8E7000F58F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A9ABBB4-46CC-4103-AF69-BA89CD0564FF}
+	EndGlobalSection
+EndGlobal
