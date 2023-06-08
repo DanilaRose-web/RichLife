@@ -4,7 +4,7 @@ The prototype of the Landing Page for the financial literacy club, and in fact s
 
 ## Preview
 
-![App Screenshot](http://danilarose.net/preview-projects/richLife_landing/richLife_landing.png)
+![App Screenshot](http://danilarose.net/preview-projects/richLife_landing/richLife_langing.png)
 
 ## Tech Stack 
 
